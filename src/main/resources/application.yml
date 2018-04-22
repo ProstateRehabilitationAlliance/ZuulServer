@@ -1,0 +1,11 @@
+server:
+  port: 8881
+
+zuul:
+  routes:
+    api-a:
+      path: /api-dcotor/**
+      service-id: doctor-server
+    api-b:
+      path: /api-record/**
+      service-id: record-server
