@@ -1,11 +1,38 @@
 server:
-  port: 8881
+  port: 80
 
 zuul:
   routes:
     api-a:
-      path: /api-dcotor/**
+      path: /api-doctor/**
       service-id: doctor-server
     api-b:
       path: /api-record/**
       service-id: record-server
+    api-c:
+      path: /api-assessmen/**
+      service-id: assessmen-server
+    api-d:
+      path: /api-stata/**
+      service-id: stata-server
+feign:
+  hystrix:
+    enabled: false
+
+#spring:
+#  security:
+#    user:
+#      password: user  # 直接登录时的密码
+#    ignored: /
+#    sessions: never   # session策略
+#    oauth2:
+#      sso:
+#        loginPath: /api-doctor/login   # 登录路径
+#      client:
+#        clientId: 你的clientId
+#        clientSecret: 你的clientSecret
+#        accessTokenUri: https://github.com/login/oauth/access_token
+#        userAuthorizationUri: https://github.com/login/oauth/authorize
+#      resource:
+#        userInfoUri: https://api.github.com/user
+#        preferTokenInfo: false
