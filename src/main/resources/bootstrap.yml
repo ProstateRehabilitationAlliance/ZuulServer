@@ -10,31 +10,3 @@ spring:
 server:
   port: 80
 
-zuul:
-  routes:
-    api-a:
-      path: /api-doctor/**
-      service-id: doctor-server
-    api-b:
-      path: /api-record/**
-      service-id: record-server
-    api-c:
-      path: /api-assessmen/**
-      service-id: assessmen-server
-    api-d:
-      path: /api-stata/**
-      service-id: stata-server
-
-ribbon:
-  ReadTimeout: 40000
-  ConnectTimeout: 40000
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: true
-        isolation:
-          thread:
-            timeoutInMilliseconds: 40000
-
