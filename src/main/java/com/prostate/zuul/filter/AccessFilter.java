@@ -62,7 +62,8 @@ public class AccessFilter extends ZuulFilter {
         }
         //TODO 根据token获取相应的登录信息，进行校验（略）
         ctx.setSendZuulResponse(false);
-        ctx.setResponseStatusCode(40001);
+        ctx.setResponseStatusCode(200);
+        ctx.setResponseBody("40001");
         //添加Basic Auth认证信息
 
         return null;
