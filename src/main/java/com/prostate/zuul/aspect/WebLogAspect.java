@@ -54,7 +54,7 @@ public class WebLogAspect {
 //        log.info("Around : " );
     }
 
-    @AfterThrowing("webLog()")
+//    @AfterThrowing("webLog()")
     public void doAfterThrowing() throws Throwable {
         // 处理完请求，返回内容
         log.info("AfterThrowing : " );
