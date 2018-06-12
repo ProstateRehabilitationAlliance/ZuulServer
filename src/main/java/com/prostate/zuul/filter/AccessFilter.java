@@ -47,8 +47,6 @@ public class AccessFilter extends ZuulFilter {
         HttpServletRequest request = ctx.getRequest();
         Object token = request.getParameter("token");
 
-        System.out.println("token============================="+token);
-
         String servletPath = ctx.getRequest().getServletPath();
         if("/api-doctor/doctor/login".equals(servletPath)||("/api-doctor/doctor/register").equals(servletPath)||servletPath.indexOf("api-stata")!=-1){
             return null;

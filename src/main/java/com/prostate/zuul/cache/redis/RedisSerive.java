@@ -1,9 +1,12 @@
 package com.prostate.zuul.cache.redis;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author MaxCoder
@@ -12,6 +15,7 @@ import org.springframework.stereotype.Service;
  *
  * Redis 服务
  */
+@Slf4j
 @Service
 public class RedisSerive {
 
@@ -25,6 +29,11 @@ public class RedisSerive {
 
     public String get(String key) {
         ValueOperations<String,String> valueOperations = stringRedisTemplate.opsForValue();
-        return valueOperations.get(key);
+        String val = valueOperations.get(key);
+        if(val==null||"".equals(val)){
+            return null;
+        }
+        valueOperations.set(key,val,60*60*24, TimeUnit.SECONDS);
+        return val;
     }
 }
