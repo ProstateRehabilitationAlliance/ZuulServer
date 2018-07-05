@@ -22,7 +22,7 @@ import java.util.Map;
 public class AccessFilter extends ZuulFilter {
 
     //无需token 的请求
-    private static String[] enableUrl = {"/api-doctor/doctor/login", "/api-doctor/doctor/register", "/api-doctor/weChat/login"};
+    private static String[] enableUrl = {"/api-doctor/doctor/login", "/api-doctor/doctor/register", "/api-doctor/weChat/login","/api-file/file/upload"};
 
     @Autowired
     private RedisSerive redisSerive;
