@@ -1,0 +1,125 @@
+@import "../css/root.less";
+// 步骤展示
+.basisContent {
+    width: 100%;
+    background: @f7f7f7;
+    min-width: @mainWidth;
+    .basisBox {
+        box-sizing: border-box;
+        width: @mainWidth;
+        margin: 0 auto;
+        position: relative;
+        padding: 60px 0;
+        .name {
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            display: block;
+            width: 233px;
+            height: 170px;
+            line-height: 170px;
+            text-align: center;
+            // margin: 60px auto;
+            border: 1px solid #BBB;
+            color: #101010;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        > ul {
+            // height: 170px;
+            margin-left: 325px;
+
+            > li {
+                float: left;
+                width: 44%;
+                margin: 0 3% 20px 0;
+                line-height: 27px;
+                font-size: 20px;
+                font-weight: bold;
+                color: @666;
+
+                i {
+                    font-style: normal;
+                }
+
+                > span {
+                    display: inline-block;
+                    width: 260px;
+                    padding-left: 10px;
+                    border-bottom: 2px solid @999;
+                    font-weight: normal;
+                }
+            }
+
+            li.item {
+                width: 88%;
+
+                > span {
+                    width: 640px;
+                }
+            }
+        }
+    }
+}
+
+
+.testBox {
+
+    > table {
+        width: @mainWidth;
+        margin: 0 auto;
+        border-top: 1px solid #BBB;
+        border-left: 1px solid #BBB;
+        tr {
+            text-align: center;
+            height: 45px;
+            th {
+                border-right: 1px solid #BBB;
+                border-bottom: 1px solid #BBB;
+                font-size: 18px;
+                color: @fff;
+                background: @73a3dd;
+            }
+            td {
+                color: @666;
+                border-right: 1px solid #BBB;
+                font-size: 18px;
+                border-bottom: 1px solid #BBB;
+            }
+        }
+
+    }
+    .addTest {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        color: @666;
+        padding: 20px 0;
+    }
+
+}
+
+.btnBox {
+    width: @mainWidth;
+    margin: 60px auto 0;
+    > a {
+        display: block;
+        box-sizing: border-box;
+        float: left;
+        width: 181px;
+        height: 55px;
+        text-align: center;
+        line-height: 55px;
+        font-size: 20px;
+        color: #fff;
+    }
+    .backBtn {
+        background: @eaeaea;
+        color: @999;
+        border: 1px solid @bfbfbf;
+    }
+    .newDossier {
+        float: right;
+        background: @green;
+    }
+}

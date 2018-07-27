@@ -1,0 +1,133 @@
+
+.userContent {
+    width: 480px;
+    height: 460px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: #000000 0px 2px 20px -5px;
+    padding: 40px 45px;
+}
+.userContent > ul > li {
+    display: inline-block;
+}
+.userContent > ul > li.active > a {
+    border-color: #1A8FD3;
+}
+.userContent > ul > li > a {
+    margin-right: 15px;
+    font-size: 34px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 6px solid transparent;
+}
+
+.userContent .signUpBox {
+
+}
+
+.userContent .signInBox {
+    display: none;
+}
+
+.userContent > div {
+    margin-top: 37px;
+    text-align: center;
+}
+
+.userContent > div > input {
+    display: block;
+    width: 100%;
+    height: 58px;
+    font-size: 16px;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 18px;
+}
+.userContent > div > input.error {
+    color: red;
+    border-color: red;
+}
+
+.userContent > div > p {
+    color: #bdbdbd;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.userContent > div > a {
+    display: inline-block;
+    width: 230px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    background: #1A8FD3;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 17px;
+    margin-top: 45px;
+}
+.amendContainer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+}
+.amendContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 480px;
+    height: 460px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: #000000 0px 2px 20px -5px;
+    padding: 40px 45px;
+}
+.amendContent > h3 {
+    display: inline-block;
+    font-size: 34px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 6px solid #1A8FD3;
+}
+/*  */
+.amendContent > div {
+    margin-top: 37px;
+    text-align: center;
+}
+
+.amendContent > div > input {
+    display: block;
+    width: 100%;
+    height: 58px;
+    font-size: 16px;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 18px;
+}
+.amendContent > div > input.error {
+    color: red;
+    border-color: red;
+}
+
+.amendContent > div > a {
+    display: inline-block;
+    width: 230px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    background: #1A8FD3;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 17px;
+    margin-top: 45px;
+}

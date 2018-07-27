@@ -1,0 +1,25 @@
+union
+    /plugins        插件库
+    /js             公共js
+    /css            公共css
+    /login          登录/注册
+    /index          首页
+    /archives       档案管理
+    /newrecord      新建档案
+    /amend          修改患者信息
+    /patientInfo    患者详情
+    /test           检测
+    /nih            NIH
+    /ipss           IPSS
+    /scale          SCALE
+
+
+------------------------------
+    JSON.stringify() 和 JSON.parse()
+
+    jquery.cookie.js
+        $.cookie('the_cookie'); //读取Cookie值
+        $.cookie('the_cookie', 'the_value'); //设置cookie的值
+        $.cookie('the_cookie', 'the_value', {expires: 7, path: '/', domain: 'jquery.com', secure: true});//新建一个cookie 包括有效期 路径域名等
+        $.cookie('the_cookie', 'the_value'); //新建cookie
+        $.cookie('the_cookie', null); //删除一个cookie

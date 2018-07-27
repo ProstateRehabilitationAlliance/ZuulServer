@@ -1,0 +1,255 @@
+@import "../css/root.less";
+// 步骤展示
+
+.standardContainer {
+    width: 100%;
+    background: @f7f7f7;
+    min-width: @mainWidth;
+    .standardBox {
+        width: @mainWidth;
+        margin: 0 auto;
+        .standardLeft {
+            float: left;
+            padding-left: 20px;
+            > h3 {
+                font-size: 28px;
+                color: @blue;
+                line-height: 80px;
+            }
+            > ul {
+                > li {
+                    position: relative;
+                    float: left;
+                    margin: 0 54px 0 0;
+                    font-size: 18px;
+                    color: @333;
+                    &.one,&.two,&.three{
+                        padding-left: 20px;
+                    }
+                    &.one:after {
+                        content: ' ';
+                        position: absolute;
+                        left: 0;
+                        top: 5px;
+                        width: 14px;
+                        height: 14px;
+                        background: #209639;
+                        border-radius: 50%;
+                    }
+                    &.two:after {
+                        content: ' ';
+                        position: absolute;
+                        left: 0;
+                        top: 5px;
+                        width: 14px;
+                        height: 14px;
+                        background: #2b73cc;
+                        border-radius: 50%;
+                    }
+                    &.three:after {
+                        content: ' ';
+                        position: absolute;
+                        left: 0;
+                        top: 5px;
+                        width: 14px;
+                        height: 14px;
+                        background: #ff3300;
+                        border-radius: 50%;
+                    }
+                    > span {
+                        color: @blue;
+                    }
+                }
+            }
+            .explain {
+                margin: 30px 0;
+                > p {
+                    line-height: 24px;
+                }
+            }
+
+        }
+        .standardRight {
+            float: right;
+            .submit {
+                margin: 64px 75px 0 0;
+                display: block;
+                width: 230px;
+                height: 65px;
+                background: @green;
+                color: @fff;
+                line-height: 65px;
+                text-align: center;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.main {
+    width: @mainWidth;
+    margin: 0 auto;
+    .mainTop {
+        position: relative;
+        .scoringBox {
+            box-sizing: border-box;
+            height: 70px;
+            border: 1px solid @ccc;
+            > li {
+                display: none;
+                float: left;
+                box-sizing: border-box;
+                height: 100%;
+                background: #fff;
+                text-align: center;
+                line-height: 70px;
+                padding: 0 55px;
+                font-size: 20px;
+                color: @333;
+                > i {
+                    margin-left: 5px;
+                    font-style: normal;
+                }
+                &.active {
+                    position: relative;
+                    z-index: 1;
+                    box-sizing: border-box;
+                    margin: -1px 0 0 -1px;
+                    height: 70px;
+                    color: @blue;
+                    border: 1px solid @blue;
+                    box-shadow: 0px 0px 6px 2px rgba(2, 2, 2, 0.1);
+                }
+            }
+        }
+        > p {
+            position: absolute;
+            top: 0;
+            right: 0;
+            box-sizing: border-box;
+            width: 380px;
+            height: 100%;
+            line-height: 70px;
+            padding: 0 0 0 27px;
+            font-size: 22px;
+            color: @333;
+            border-left: 1px solid @ccc;
+            > span {
+                color: @blue;
+                &.count {
+                    margin-left: 35px;
+                }
+            }
+        }
+    }
+    .mainBottom {
+        .answerContainer {
+            float: left;
+            width: 820px;
+            .answerContent {
+                margin: 14px 0 0 0;
+                .radioBox {
+                    width: 820px;
+                    box-sizing: border-box;
+                    border: 1px solid @999;
+                    padding: 0 22px 8px;
+                    margin: 24px 0 0 0;
+                    > h2 {
+                        box-sizing: border-box;
+                        height: 60px;
+                        line-height: 60px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: @333;
+                        border-bottom: 1px solid @blue;
+                    }
+                    .radioItem {
+                        box-sizing: border-box;
+                        height: 38px;
+                        line-height: 38px;
+                        border-bottom: 1px dashed @ccc;
+                        &:last-child{
+                            border: none;
+                        }
+                        > div {
+                            float: right;
+                            > a {
+                                margin: 0 0 0 20px;
+                                display: inline-block;
+                                padding: 0 0 0 30px;
+                                background: url('./radio_false.png') no-repeat left center;
+                                &.active {
+                                    background: url('./radio_true.png') no-repeat left center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .dragBox {
+                    box-sizing: border-box;
+                    margin: 24px 0 0 0;
+                    border: 1px solid @999;
+                    position: relative;
+                    padding: 0 20px;
+                    > h2 {
+                        box-sizing: border-box;
+                        height: 60px;
+                        line-height: 60px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: @333;
+                        border-bottom: 1px solid @blue;
+                    }
+                    > li {
+                        float: left;
+                        box-sizing: border-box;
+                        width: 70px;
+                        text-align: center;
+                        margin: 20px 0;
+                        cursor: pointer;
+                        background: url('./radio_false.jpg') no-repeat 25px 36px;
+                        &.active {
+                            background: url('./radio_true.jpg') no-repeat 25px 36px;
+                        }
+                        > span {
+                            box-sizing: border-box;
+                            position: relative;
+                            z-index: -1;
+                            display: block;
+                            height: 45px;
+                            // padding: 0 5px;
+                            border-bottom: 2px solid @blue;
+                        }
+                        > p {
+                            margin: 30px 0 0 0;
+                        }
+                    }
+                    .hand {
+                        position: absolute;
+                        top: 25px;
+                        left: 10px;
+                    }
+                }
+            }
+        }
+        .twoContent, .threeContent {
+            display: none;
+        }
+        .verdict {
+            float: left;
+            > h3 {
+                margin: 40px 0 0 27px;
+            }
+            > p {
+                font-size: 14px;
+                color: @666;
+                margin: 10px 27px 0 27px;
+                text-indent: 28px;
+            }
+        }
+    }
+
+
+
+
+}

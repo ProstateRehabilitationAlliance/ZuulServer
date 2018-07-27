@@ -1,0 +1,105 @@
+@import "../css/root.less"; // 设置中心
+
+.setUpBox {
+    width: @mainWidth;
+
+    > a {
+        display: block;
+        text-align: right;
+        text-decoration: none;
+        line-height: 50px;
+
+        > img {
+            display: inline-block;
+            float: right;
+            margin: 18px 10px 0 0;
+        }
+
+        > p {
+            float: right;
+            margin: 0;
+            display: inline-block;
+            font-size: 16px;
+            color: @999;
+        }
+    }
+}
+
+.main {
+    width: @mainWidth;
+    margin: 88px auto 100px;
+    overflow: hidden;
+
+    .logoBox {
+        position: relative;
+        margin: 0 140px 0 177px;
+        float: left;
+
+        > a {
+            display: block;
+        }
+    }
+
+    .userBox {
+        float: left;
+        text-align: left;
+
+        .title {
+            margin-top: 120px;
+            font-size: 30px;
+            color: #095fac;
+            font-weight: bold;
+        }
+
+        .userInfo {
+            margin-top: 40px;
+            font-size: 24px;
+            color: #095fac;
+
+            > span {
+                border-bottom: 1px solid @blue;
+                padding: 0 70px 0 20px;
+            }
+        }
+    }
+}
+
+.moduleContainer {
+    width: 100%;
+    min-width: @mainWidth;
+    background: @f7f7f7;
+    overflow: hidden;
+
+    .moduleContent {
+        width: @mainWidth;
+        margin: 32px auto;
+
+        > a {
+            float: left;
+            display: block;
+            box-sizing: border-box;
+            padding: 57px 0 0;
+            width: 400px;
+            height: 230px;
+            border-left: 1px solid @blue;
+            text-align: center;
+            text-decoration: none;
+
+            &:last-child {
+                border-right: 1px solid @blue;
+            }
+
+            > img {
+                height: 91px;
+            }
+
+            > p {
+                margin: 30px 0 0;
+                font-size: 24px;
+                color: @666;
+                line-height: 26px;
+                font-weight: bold;
+            }
+        }
+    }
+}

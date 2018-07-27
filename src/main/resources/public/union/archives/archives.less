@@ -1,0 +1,176 @@
+@import "../css/root.less";
+
+// 操作栏
+.operationContainer {
+    width: 100%;
+    min-width: @mainWidth;
+    background: @f7f7f7;
+    .operationContent {
+        box-sizing: border-box;
+        width: @mainWidth;
+        margin: 0 auto;
+        padding: 84px 0 74px;
+        > div {
+            float: left;
+            >img {
+                display: block;
+                float: left;
+                margin: 0 17px 0 14px;
+            }
+            > input {
+                box-sizing: border-box;
+                width: 296px;
+                height: 54px;
+                font-size: 20px;
+                padding: 5px;
+                color: @666;
+                border: 1px solid @blue;
+                background: @f7f7f7;
+                padding: 0 25px;
+            }
+        }
+        .dossierSearch {
+            margin-left: 26px;
+        }
+        .scan {
+            margin: 0 76px 0 60px;
+            cursor: pointer;
+        }
+
+        .searchBtn {
+            float: right;
+            display: block;
+            width: 200px;
+            height: 54px;
+            line-height: 54px;
+            background: @blue;
+            color: @fff;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
+}
+
+
+// 表格
+table {
+    width: @mainWidth;
+    margin: 30px auto 0;
+    border-right: 1px solid @ccc;
+    border-bottom: 1px solid @ccc;
+    tr {
+        text-align: center;
+        th {
+            box-sizing: border-box;
+            height: 45px;
+            background: @73a3dd;
+            color: #fff;
+            border-top: 1px solid @ccc;
+            border-left: 1px solid @ccc;
+            font-size: 18px;
+        }
+        td {
+            box-sizing: border-box;
+            height: 45px;
+            border-top: 1px solid @ccc;
+            border-left: 1px solid @ccc;
+            font-size: 18px;
+            color: @666;
+            > a {
+                display: block;
+            }
+        }
+    }
+}
+.bottomContent {
+    width: @mainWidth;
+    margin: 60px auto 0;
+    .operator {
+        float: left;
+        line-height: 66px;
+        font-size: 20px;
+        color: @666;
+    }
+
+    .btnBox {
+        float: right;
+        > a {
+            display: block;
+            box-sizing: border-box;
+            float: left;
+            width: 220px;
+            height: 66px;
+            text-align: center;
+            line-height: 66px;
+            font-size: 20px;
+            color: @666;
+        }
+        .backBtn {
+            background: @e8e8e8;
+            font-weight: bold;
+            margin-right: 14px;
+            border: 1px solid @bfbfbf;
+        }
+        .newDossier {
+            background: @blue;
+            color: @fff;
+        }
+    }
+}
+.pageContent {
+    text-align: center;
+    .pageBox {
+        display: inline-block;
+    }
+}
+// 关联患者
+.associatedContent {
+    display: none;
+    box-sizing: border-box;
+    width: 336px;
+    // height: 210px;
+    .title {
+        box-sizing: border-box;
+        padding: 0 25px;
+        background: #f9f9f9;
+        line-height: 50px;
+        font-size: 18px;
+        color: #333333;
+    }
+    .associatedBox {
+        box-sizing: border-box;
+        width: 100%;
+        background: #ffffff;
+        padding: 25px;
+        > input {
+            width: 100%;
+            line-height: 42px;
+            background: #ededed;
+            font-size: 16px;
+            color: #666666;
+            padding: 0 10px;
+        }
+        .btnBox {
+            box-sizing: border-box;
+            margin-top: 30px;
+            > a {
+                display: block;
+                width: 104px;
+                line-height: 36px;
+                text-align: center;
+                &.noBtn {
+                    float: left;
+                    border: 1px solid #999999;
+                    color: #666666;
+                    font-size: 16px;
+                }
+                &.yesBtn {
+                    float: right;
+                    background: #095fac;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

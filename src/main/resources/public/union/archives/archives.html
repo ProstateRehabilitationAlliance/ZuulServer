@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>档案管理-前列腺疾病评估管理系统</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="/union/css/reset.css">
+        <link rel="stylesheet" href="/union/plugins/layui/css/layui.css">
+        <link rel="stylesheet/less" href="/union/archives/archives.less">
+        <script src="/union/js/jquery1.12.4.min.js" charset="utf-8"></script>
+        <script src="/union/plugins/layui/layui.all.js" charset="utf-8"></script>
+        <script src="/union/js/jquery.cookie.js" charset="utf-8"></script>
+        <script src="/union/js/less.min.js" charset="utf-8"></script>
+        <script src="/union/js/root.js" charset="utf-8"></script>
+        <script src="/union/js/utils.js" charset="utf-8"></script>
+        <script src="/union/archives/archives.js" charset="utf-8"></script>
+        <!--[if lt IE 9]>
+        <script src="/union/js/respond.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/union/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="operationContainer">
+            <div class="operationContent clearfix">
+                <div class="userSearch">
+                    <img src="/union/archives/user.png" alt="用户名搜索">
+                    <input type="text" class="patientName" placeholder="请输入用户姓名">
+                </div>
+                <div class="dossierSearch">
+                    <img src="/union/archives/document.png" alt="档案搜索">
+                    <input type="text" class="number" placeholder="请输入用户档案号或手机号">
+                </div>
+                <img class="scan" src="/union/archives/scan.png" alt="条码扫描">
+                <a class="searchBtn" href="javascript:;">查询/刷新</a>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th style="width: 100px;">建档时间</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th style='width: 220px;'>身份证号</th>
+                    <th>年龄</th>
+                    <th>评分等级</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody class="tbodyContent">
+                <!-- <tr>
+                    <td>1</td>
+                    <td>20180325</td>
+                    <td>陈赫</td>
+                    <td>男</td>
+                    <td>2384782374827348</td>
+                    <td>50</td>
+                    <td>B</td>
+                    <td>10</td>
+                    <td>心脏病、心脏病、心脏病、心脏病、</td>
+                    <td><a  href="/union/patientInfo/patientInfo.html">查看</a></td>
+                </tr> -->
+            </tbody>
+        </table>
+        <div class="pageContent">
+            <div class="pageBox" id="pageBox"></div>
+        </div>
+        <div class="bottomContent">
+            <div class="operator">
+                <p>操作人：周晓晓医生</p>
+            </div>
+            <div class="btnBox clearfix">
+                <a class="backBtn" href="/union/index/index.html">
+                    <span>后退</span>
+                </a>
+                <a class="newDossier" href="javascript:;">新建患者档案</a>
+            </div>
+        </div>
+        <div class="associatedContent">
+            <p class="title">输入验证码</p>
+            <div class="associatedBox">
+                <input class="cacheInput" type="text">
+                <div class="btnBox clearfix">
+                    <a class="noBtn" href="javascript:;">取消</a>
+                    <a class="yesBtn" href="javascript:;">确认</a>
+                </div>
+            </div>
+        </div>
+
+</body>
+    </html>

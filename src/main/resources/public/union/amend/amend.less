@@ -1,0 +1,373 @@
+@import "../css/root.less";
+// 步骤展示
+
+.stepBox {
+    text-align: center;
+    > span {
+        display: inline-block;
+        margin: 30px 0;
+        > p {
+            line-height: 24px;
+            font-size: 16px;
+            color: @blue;
+        }
+    }
+    .active {
+        > p {
+            color: #101010;
+        }
+    }
+    .line {
+        position: relative;
+        top: -27px;
+        width: 390px;
+        height: 1px;
+        background: @437fd0;
+    }
+}
+.infoContainer {
+    width: 100%;
+    min-width: @mainWidth;
+    background: @f7f7f7;
+    .infoContent {
+        width: @mainWidth;
+        margin: 0 auto;
+        > div {
+             float: left;
+        }
+        .tabBox {
+            margin: 33px 97px 0 42px;
+            > a {
+                display: block;
+                box-sizing: border-box;
+                width: 124px;
+                height: 253px;
+                padding: 57px 45px;
+                text-align: center;
+                line-height: 35px;
+                color: @666;
+                font-size: 30px;
+                background: @ebebeb;
+                &.active {
+                    background: @fff;
+                    color: @437fd0;
+                    box-shadow: 0px 0px 23px 15px rgba(2, 2, 2, 0.07);
+                }
+            }
+        }
+        .userinfoContainer,.illnessinfoContainer {
+            width: 934px;
+            .btnBox {
+                width: 100%;
+                float: left;
+                margin: 80px 0 0 0;
+                > a {
+                    display: block;
+                    box-sizing: border-box;
+                    float: left;
+                    width: 181px;
+                    height: 63px;
+                    text-align: center;
+                    line-height: 63px;
+                    font-size: 22px;
+                    color: #fff;
+                }
+                .backBtn {
+                    background: @eaeaea;
+                    font-weight: bold;
+                    color: @333;
+                    border: 1px solid @bfbfbf;
+                    margin-left: 28px;
+                }
+                .nextStep {
+                    float: right;
+                    background: @green;
+                }
+                .pervStep {
+                    background: @eaeaea;
+                    font-weight: bold;
+                    color: @333;
+                    border: 1px solid @bfbfbf;
+                    margin-left: 28px;
+                }
+                .submit {
+                    float: right;
+                    background: @green;
+                }
+            }
+        }
+        .userinfoContainer {
+            margin: 59px 0 0 0;
+            .baseItem {
+                float: left;
+                box-sizing: border-box;
+                width: 50%;
+                margin: 32px 0 0 0;
+                > span {
+                    display: block;
+                    float: left;
+                    box-sizing: border-box;
+                    width: 134px;
+                    font-size: 20px;
+                    line-height: 48px;
+                    text-align: center;
+                }
+                > input {
+                    box-sizing: border-box;
+                    width: 289px;
+                    height: 48px;
+                    padding: 0 15px;
+                    line-height: 48px;
+                    font-size: 14px;
+                    border: 1px solid #BBB;
+                    background: @f7f7f7;
+                    &:focus {
+                        border-color: @blue;
+                    }
+                }
+                > input.error {
+                    border-color: red;
+                }
+                .age {
+                    float: left;
+                    border: 1px solid #BBB;
+                    height: 48px;
+                    text-align: center;
+                    line-height: 48px;
+                    width: 89px;
+                    margin-left: 20px;
+                }
+
+                > select {
+                    box-sizing: border-box;
+                    display: block;
+                    width: 289px;
+                    height: 48px;
+                    border: 1px solid #BBB;
+                }
+                .patientBirthday {
+                    float: left;
+                    border: 1px solid #BBB;
+                    height: 48px;
+                    line-height: 48px;
+                    width: 180px;
+                    text-align: center;
+                }
+                .patientSex {
+                    float: left;
+                    border: 1px solid #BBB;
+                    height: 48px;
+                    text-align: center;
+                    line-height: 48px;
+                    width: 89px;
+                    margin-left: 20px;
+                }
+            }
+            .addrBox {
+                margin: 32px 0 0 0;
+                float: left;
+                width: 100%;
+                height: 48px;
+                line-height: 48px;
+                > span {
+                    display: block;
+                    float: left;
+                    box-sizing: border-box;
+                    width: 134px;
+                    font-size: 20px;
+                    line-height: 48px;
+                    text-align: center;
+                }
+                > select {
+                    float: left;
+                    box-sizing: border-box;
+                    margin-right: 9px;
+                    width: 134px;
+                    height: 48px;
+                    font-size: 16px;
+                }
+                > input {
+                    box-sizing: border-box;
+                    width: 315px;
+                    height: 48px;
+                    padding: 0 20px;
+                    line-height: 48px;
+                    border: 1px solid #101010;
+                    font-size: 14px;
+                    border: 1px solid #BBB;
+                    background: @f7f7f7;
+                    &:focus {
+                        border-color: @blue;
+                    }
+                }
+                > input.error {
+                    border-color: red;
+                }
+            }
+        }
+        .illnessinfoContainer {
+            display: none;
+            margin: 32px 0 0 0;
+            .illnessBox {
+                position: relative;
+                margin: 0 0 9px 20px;
+                box-sizing: border-box;
+                background: @fff;
+                > p {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    float: left;
+                    box-sizing: border-box;
+                    width: 209px;
+                    height: 75px;
+                    line-height: 75px;
+                    text-align: center;
+                    font-size: 16px;
+                    margin: auto;
+                }
+                .illnessBoxRight {
+                    float: right;
+                    box-sizing: border-box;
+                    width: 705px;
+                    border-left: 2px solid @ebebeb;
+                    .radioBox {
+                        float: left;
+                        > a {
+                            display: inline-block;
+                            margin: 26px 0 0 50px;
+                            font-size: 15px;
+                            padding: 0 0 0 30px;
+                            background: url('./radio_false.png') no-repeat left center;
+                        }
+                        > a.active {
+                            background: url('./radio_true.png') no-repeat left center;
+                            color: @blue;
+                        }
+                    }
+                    .searchBox {
+                        float: left;
+                        position: relative;
+                        > input {
+                            box-sizing: border-box;
+                            margin: 17px 0 20px 85px;
+                            border: 1px solid #BBB;
+                            font-size: 18px;
+                            height: 38px;
+                            width: 288px;
+                            padding: 5px;
+                            &:focus {
+                                border-color: @blue;
+                            }
+                        }
+                        > ul {
+                            display: none;
+                            position: absolute;
+                            top: 54px;
+                            left: 85px;
+                            z-index: 99;
+                            background: #fff;
+                            width: 200px;
+                            border: 1px solid @blue;
+                            overflow: hidden;
+                            > li {
+                                height: 30px;
+                                line-height: 30px;
+                                padding: 0 10px 0;
+                                &:hover {
+                                    background: #BBB;
+                                }
+                            }
+                        }
+                    }
+                    > ul {
+                        // display: none;
+                        float: left;
+                        box-sizing: border-box;
+                        width: 100%;
+                        min-height: 75px;
+                        border-top: 2px solid @ebebeb;
+                        > li {
+                            box-sizing: border-box;
+                            // width: 88px;
+                            padding: 0 8px;
+                            height: 32px;
+                            line-height: 30px;
+                            float: left;
+                            border: 1px solid @blue;
+                            color: @blue;
+                            text-align: center;
+                            margin: 11px 0 11px 38px;
+                        }
+                    }
+                }
+
+            }
+            .descBox {
+                margin: 40px 0 0 20px;
+                box-sizing: border-box;
+                background: @fff;
+                padding: 22px 0;
+                > span {
+                    float: left;
+                    width: 207px;
+                    text-align: center;
+                    font-size: 22px;
+                    color: @666;
+                    line-height: 60px;
+                }
+                textarea {
+                    box-sizing: border-box;
+                    width: 572px;
+                    height: 60px;
+                    border: 1px solid @999;
+                    padding: 5px;
+                    font-size: 18px;
+                    &:focus {
+                        border-color: @blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.promptBox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    box-sizing: border-box;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    background: #BBB;
+    > p {
+        margin: 30px 0 0 0;
+        font-size: 20px;
+        text-align: center;
+    }
+    .closeBtn {
+        text-align: center;
+        > a {
+            display: inline-block;
+            margin: 30px 30px;
+            width: 140px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 36px;
+            color: #101010;
+            border-radius: 5px;
+            &.closeNo {
+                background: #009688;
+            }
+            &.closeYes {
+                background: #FF9800;
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@import "../css/root.less";
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    max-width: 862px;
+    height: 397px;
+    box-sizing: border-box;
+    border: 1px solid @c6c6c6;
+    .logoContent {
+        position: absolute;
+        top: -28px;
+        left: -19px;
+        box-sizing: border-box;
+        width: 430px;
+        height: 406px;
+        border: 1px solid @c6c6c6;
+        background: @f9f9f9;
+        box-shadow: 16px 10px 52px 0px rgba(2, 2, 2, 0.1);
+    }
+    .unionBox {
+        font-size: 20px;
+        color: @blue;
+        font-weight: bold;
+        padding: 17px;
+        box-sizing: border-box;
+        > img {
+            margin-right: 6px;
+        }
+    }
+    .hospitalLogo {
+        display: block;
+        margin: 84px auto;
+    }
+    .version {
+        position: absolute;
+        bottom: 34px;
+        right: 37px;
+        font-size: 20px;
+        color: @666;
+    }
+    .loginContent {
+        float: right;
+        box-sizing: border-box;
+        width: 424px;
+        padding: 14px 56px 0;
+        > h1 {
+            display: inline-block;
+            font-size: 24px;
+            padding: 15px 0;
+            color: @blue;
+            border-bottom: 2px solid @558fd6;
+        }
+        > h2 {
+            font-size: 24px;
+            color: @blue;
+            padding: 18px 0;
+        }
+        .textBox {
+            > li {
+                box-sizing: border-box;
+                border: 1px solid @999;
+                width: 312px;
+                height: 48px;
+                margin: 15px 0 0 0;
+                padding: 7px 7px 7px 74px;
+                &.userItem {
+                    background: url('./user.png') no-repeat 22px center;
+                }
+                &.passwordItem {
+                    background: url('./password.png') no-repeat 22px center;
+                }
+                &.error {
+                    border-color: red;
+                }
+                > input {
+                    height: 100%;
+                    padding: 0 0 0 20px;
+                    border-left: 2px solid @999;
+                    font-size: 18px;
+                }
+            }
+        }
+        .logInBtn {
+            display: block;
+            width: 312px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            background: @green;
+            color: @fff;
+            margin: 27px 0 0 0;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+}
