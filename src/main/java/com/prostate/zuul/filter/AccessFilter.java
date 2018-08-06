@@ -22,7 +22,7 @@ import java.util.Map;
 public class AccessFilter extends ZuulFilter {
 
     //无需token 的请求
-    private static String[] enableUrl = {"/api-doctor/doctor/login", "/api-doctor/doctor/register", "/api-doctor/weChat/login","/api-file/file/upload", "/api-doctor/weChat/oauth"};
+    private static String[] enableUrl = {"/api-doctor/doctor/login", "/api-doctor/doctor/register", "/api-doctor/weChat/login","/api-file/file/upload", "/api-doctor/weChat/oauth","/api-third/file/upload","/api-third/sms/sendLoginCode","/api-third/sms/sendPasswordReplaceCode","/api-third/sms/sendRegisterCode"};
 
     @Autowired
     private RedisSerive redisSerive;
@@ -42,11 +42,17 @@ public class AccessFilter extends ZuulFilter {
         return true;
     }
 
+
+    private static final ThreadLocal<String> userHolder = new ThreadLocal<String>();
+
+    private static final ThreadLocal<HttpServletRequest> requestHolder = new ThreadLocal<HttpServletRequest>();
+
     @Override
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         Object token = request.getParameter("token");
+        ThreadLocal<Object> t = new ThreadLocal<>();
 
         String servletPath = request.getServletPath();
         log.info("TOKEN=" + token);
