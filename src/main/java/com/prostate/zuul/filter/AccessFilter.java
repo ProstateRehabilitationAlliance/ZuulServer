@@ -5,6 +5,7 @@ import com.netflix.zuul.context.RequestContext;
 import com.prostate.zuul.cache.redis.RedisSerive;
 import com.prostate.zuul.util.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
@@ -22,7 +23,7 @@ import java.util.Map;
 public class AccessFilter extends ZuulFilter {
 
     //无需token 的请求
-    private static String[] enableUrl = {"/api-doctor/doctor/login", "/api-doctor/doctor/register", "/api-doctor/weChat/login","/api-user/weChat/login","/api-file/file/upload","/api-third/file/upload", "/api-doctor/weChat/oauth","/api-third/file/upload","/api-user/doctor/loginSms","/api-user/doctor/passwordSms","/api-user/doctor/registerSms","/api-user/doctor/register","/api-user/doctor/login","/api-user/doctor/smsLogin","/api-user/doctor/passwordReset"};
+    private static String[] enableUrl = {"/api-doctor/doctor/login", "/api-doctor/doctor/register", "/api-doctor/weChat/login","/api-user/weChat/login","/api-file/file/upload","/api-third/cos/upload", "/api-doctor/weChat/oauth","/api-third/file/upload","/api-user/doctor/loginSms","/api-user/doctor/passwordSms","/api-user/doctor/registerSms","/api-user/doctor/register","/api-user/doctor/login","/api-user/doctor/smsLogin","/api-user/doctor/passwordReset"};
 
     @Autowired
     private RedisSerive redisSerive;
@@ -51,8 +52,11 @@ public class AccessFilter extends ZuulFilter {
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-        Object token = request.getParameter("token");
-        ThreadLocal<Object> t = new ThreadLocal<>();
+        StringBuilder token = new StringBuilder();
+
+        token.append(StringUtils.isBlank(request.getParameter("token"))?"":request.getParameter("token"));
+        token.append(StringUtils.isBlank(request.getHeader("token"))?"":request.getHeader("token"));
+
 
         String servletPath = request.getServletPath();
         log.info("TOKEN=" + token);
