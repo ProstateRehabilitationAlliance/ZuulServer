@@ -43,11 +43,6 @@ public class AccessFilter extends ZuulFilter {
         return true;
     }
 
-
-    private static final ThreadLocal<String> userHolder = new ThreadLocal<String>();
-
-    private static final ThreadLocal<HttpServletRequest> requestHolder = new ThreadLocal<HttpServletRequest>();
-
     @Override
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
@@ -55,13 +50,11 @@ public class AccessFilter extends ZuulFilter {
         StringBuilder token = new StringBuilder();
 
         token.append(StringUtils.isBlank(request.getParameter("token"))?"":request.getParameter("token"));
+
         token.append(StringUtils.isBlank(request.getHeader("token"))?"":request.getHeader("token"));
 
-
         String servletPath = request.getServletPath();
-        log.info("TOKEN=" + token);
-        log.info("request=" + request.getSession().getId());
-        log.info("ServletPath=" + servletPath);
+        log.info("TOKEN=" + token+"----"+"ServletPath=" + servletPath);
 
         if (Arrays.asList(enableUrl).contains(servletPath) || servletPath.indexOf("api-stata") != -1) {
             return null;
